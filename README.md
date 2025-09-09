@@ -22,32 +22,6 @@
 2. Branch: `main` → `/ (root)`  
 3. Адрес: `https://<логин>.github.io/lira-landing/`
 
-## 📂 Структура
-/
-├── index.html # Главная страница
-├── assets/
-│ ├── css/
-│ │ ├── base.css # сбросы/базовые стили
-│ │ ├── layout.css # сетка, шапка, подвал
-│ │ └── components.css # анимации, кнопки, карточки
-│ ├── js/
-│ │ ├── menu.js # логика бургер-меню
-│ │ ├── docs.js # раскрытие/сворачивание документов
-│ │ └── pdf-viewer.js # открытие PDF во всплывающем окне
-│ └── img/
-│ ├── hero.jpg
-│ ├── doctor1.jpg
-│ └── doctor2.jpg
-└── docs/ # PDF-документы
-├── rights.pdf
-├── extract.pdf
-├── usrip.pdf
-├── paid-services.pdf
-└── ...
-
-csharp
-Копировать код
-
 ## 👤 Автор
 Разработка: [YADOV](https://github.com/IV-YADOV)  
 «Code is art. Signed by YADOV.»
