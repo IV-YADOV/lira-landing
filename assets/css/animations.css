@@ -1,0 +1,6 @@
+/* Лёгкие анимации и «плавающая» звезда */
+@keyframes fadeIn { from {opacity:0; transform: translateY(8px);} to {opacity:1; transform: translateY(0);} }
+.fade-in { animation: fadeIn .8s ease both; }
+
+@keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-6px);} }
+.floating { animation: float 6s ease-in-out infinite; }

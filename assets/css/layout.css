@@ -1,0 +1,32 @@
+/* Макеты секций/контейнеров и шапки */
+.site-header { backdrop-filter: saturate(180%) blur(8px); }
+
+/* Мобильное меню — начальное скрытое состояние
+   (открытие/закрытие будет через добавление .is-open) */
+/* Мобильное меню поверх шапки, вне потока */
+.mobile-nav {
+  position: absolute;     /* было в потоке — теперь над шапкой */
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 30;
+
+  border-top: 1px solid rgb(226 232 240 / 1); /* slate-200 */
+  background: rgba(255,255,255,1);
+
+  transform-origin: top;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+
+  pointer-events: none;   /* клики отключены, пока закрыто */
+  visibility: hidden;     /* полностью невидимо визуально */
+  transition: opacity .3s ease, transform .3s ease, visibility .3s ease;
+}
+
+.mobile-nav.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;   /* включаем клики */
+  visibility: visible;
+}
+

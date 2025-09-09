@@ -1,0 +1,58 @@
+/* Карточки услуг */
+.service-card {
+  padding: 1.25rem; /* p-5 */
+  border-radius: 1rem; /* 2xl visually */
+  border: 1px solid rgb(241 245 249 / 1); /* slate-100 */
+  background: rgb(248 250 252 / 1); /* slate-50 */
+  transition: border-color .2s ease;
+}
+.service-card:hover { border-color: rgb(196 181 253 / 1); } /* purple-200 */
+.service-summary {
+  display: flex; align-items: center; justify-content: space-between;
+  font-weight: 600; color: rgb(15 23 42 / 1); /* slate-900 */
+}
+.service-summary::after {
+  content: "раскрыть";
+  margin-left: .75rem; font-size: .75rem; color: rgb(100 116 139 / 1);
+}
+details[open] > .service-summary::after { content: "свернуть"; }
+.service-text { margin-top: .75rem; font-size: .875rem; color: rgb(71 85 105 / 1); }
+
+/* Документы — мобильные «чипы» */
+.doc-chip {
+  min-width: 240px;
+  display: flex; gap: .75rem; align-items: center;
+  padding: 1rem; border-radius: .75rem;
+  border: 1px solid rgb(241 245 249 / 1);
+  background: rgb(248 250 252 / 1);
+  transition: border-color .2s ease, transform .2s ease;
+  -ms-ime-align: start;
+}
+.doc-chip:hover { border-color: rgb(196 181 253 / 1); transform: translateY(-1px); }
+.doc-badge {
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: .5rem; background: #fff; border: 1px solid rgb(226 232 240 / 1);
+  font-size: .75rem; color: rgb(71 85 105 / 1);
+}
+
+/* Документы — карточки сетки (ПК) */
+.doc-card {
+  display: flex; gap: .75rem; align-items: center;
+  padding: 1rem; border-radius: .75rem;
+  border: 1px solid rgb(241 245 249 / 1);
+  background: rgb(248 250 252 / 1);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.doc-card:hover {
+  border-color: rgb(196 181 253 / 1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgb(17 24 39 / 0.06);
+}
+.doc-title { font-weight: 600; }
+.doc-sub { font-size: .75rem; color: rgb(100 116 139 / 1); }
+
+/* PDF диалог (над базой dialog) */
+.pdf-dialog {
+  max-width: 1024px; width: 92vw;
+  border: none; border-radius: 1rem; padding: 0; overflow: hidden;
+}

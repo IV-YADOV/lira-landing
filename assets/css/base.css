@@ -1,0 +1,19 @@
+/* Переменные и базовые настройки */
+:root {
+  --brand: #7c3aed;      /* purple-600 */
+  --brand-50: #f5f3ff;   /* soft bg */
+}
+
+/* Плавный скролл + уважение prefers-reduced-motion */
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 96px; } /* якоря не прячутся под шапкой */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Диалог backdrop */
+dialog::backdrop { background: rgb(0 0 0 / 0.55); }
+
+/* Небольшой reset для <summary> */
+summary { list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
