@@ -7,10 +7,10 @@
   <meta name="description" content="Современные косметологические процедуры: инъекции, уходовые программы, чистки, пилинги, массаж лица, прессомассаж, биоревитализация, мезотерапия, плазмотерапия, ботулинотерапия, объёмное моделирование. Запись по телефону 8 (924) 211-23-49." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>">
 
-  <!-- Tailwind (CDN) для утилитарной верстки -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Наши стили (порядок важен: от общего к частному) -->
+  <!-- Наши стили -->
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <!-- Мобильное меню (анимация управляется классами .is-open) -->
+    <!-- Мобильное меню -->
     <nav id="mobileNav" class="mobile-nav md:hidden">
       <div class="px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3 text-sm">
         <a href="#services" class="px-3 py-2 rounded-lg hover:bg-purple-50 nav-link">Услуги</a>
@@ -94,7 +94,7 @@
           Лира — ваш союзник в красоте
         </h1>
         <p class="mt-4 text-lg text-slate-700 max-w-2xl">
-          Современные и безопасные косметологические процедуры в Хабаровске: инъекции, уходовые программы, чистки, массаж, аппаратные методики. Косметология, которой можно доверять.
+          Современные и безопасные косметологические процедуры в Хабаровске: инъекции, уходовые программы, чистки, массаж. Косметология, которой можно доверять.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="#services" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300">Список услуг</a>
@@ -132,12 +132,9 @@
       </div>
 
       <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- карточки услуг -->
         <details class="service-card">
           <summary class="service-summary">Пилинг</summary>
-          <p class="service-text">
-            Пилинг — отшелушивание омертвевших клеток для обновления кожи. Стимулирует регенерацию и синтез коллагена: выравнивает рельеф, осветляет пигментацию, сужает поры, уменьшает морщины.
-          </p>
+          <p class="service-text">Пилинг — отшелушивание омертвевших клеток для обновления кожи. Стимулирует регенерацию и синтез коллагена: выравнивает рельеф, осветляет пигментацию, сужает поры, уменьшает морщины.</p>
         </details>
 
         <details class="service-card">
@@ -185,26 +182,62 @@
       <div class="mt-6 grid md:grid-cols-2 gap-6">
         <article class="p-6 rounded-3xl border border-slate-100 bg-white shadow-sm">
           <div class="flex items-start gap-5">
-            <img src="image/doctor1.JPG" alt="Ирина Литвиновская" class="w-28 h-30 object-cover rounded-2xl"/>
+            <img src="image/doctor1.JPG" alt="Ирина Литвиновская" class="w-28 h-40 object-cover rounded-2xl"/>
             <div>
               <h3 class="font-semibold text-lg">Литвиновская Ирина Анатольевна</h3>
               <div class="text-sm text-slate-600">Врач дерматовенеролог-косметолог</div>
-              <p class="mt-3 text-sm text-slate-700">Ведущий специалист по инъекционным методикам.</p>
+              <p class="mt-3 text-sm text-slate-700">Ведущий специалист по инъекционным методикам. Многолетний опыт.</p>
+              <button data-doctor="litvinovskaya" class="mt-3 px-3 py-1.5 rounded-lg bg-purple-600 text-white text-sm hover:bg-purple-700">Подробнее</button>
             </div>
           </div>
         </article>
+
         <article class="p-6 rounded-3xl border border-slate-100 bg-white shadow-sm">
           <div class="flex items-start gap-5">
-            <img src="image/doctor2.JPG" alt="Екатерина Шумакова" class="w-28 h-30 object-cover rounded-2xl"/>
+            <img src="image/doctor2.JPG" alt="Екатерина Шумакова" class="w-28 h-40 object-cover rounded-2xl"/>
             <div>
               <h3 class="font-semibold text-lg">Шумакова Екатерина Сергеевна</h3>
               <div class="text-sm text-slate-600">Косметолог-эстетист</div>
-              <p class="mt-3 text-sm text-slate-700">Специалист по уходовым программам, массажу лица и гигиеническим чисткам.</p>
+              <p class="mt-3 text-sm text-slate-700">Специалист по уходовым программам, массажу лица и чисткам.</p>
+              <button data-doctor="shumakova" class="mt-3 px-3 py-1.5 rounded-lg bg-purple-600 text-white text-sm hover:bg-purple-700">Подробнее</button>
             </div>
           </div>
         </article>
       </div>
     </div>
+
+    <!-- Диалоги специалистов -->
+    <dialog id="doctorDialog" class="rounded-2xl max-w-3xl w-[92%] p-0 border-0 shadow-2xl">
+      <div class="p-6">
+        <h3 id="doctorName" class="text-xl font-bold"></h3>
+
+        <div class="mt-4 border-b border-slate-200 flex gap-2">
+          <button id="tabAbout" class="px-3 py-2 text-sm rounded-t-lg bg-slate-100">О специалисте</button>
+          <button id="tabCerts" class="px-3 py-2 text-sm rounded-t-lg hover:bg-slate-100">Дипломы и сертификаты</button>
+        </div>
+
+        <div id="doctorAbout" class="mt-4 text-sm text-slate-700 space-y-3"></div>
+
+        <div id="doctorCerts" class="mt-4 hidden">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="certGrid"></div>
+          <div class="mt-3 text-xs text-slate-500">Нажмите на изображение или значок PDF, чтобы открыть документ.</div>
+        </div>
+
+        <div class="mt-6 flex justify-end">
+          <button id="doctorClose" class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Закрыть</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog id="imageDialog" class="rounded-2xl max-w-4xl w-[96%] p-0 border-0 shadow-2xl">
+      <div class="bg-black">
+        <img id="imageFull" alt="Скан сертификата" class="w-full h-auto block max-h-[85vh] object-contain">
+      </div>
+      <div class="px-4 py-3 border-t flex justify-between items-center bg-white">
+        <div id="imageCaption" class="text-sm text-slate-700 truncate"></div>
+        <button id="imageClose" class="px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800">Закрыть</button>
+      </div>
+    </dialog>
   </section>
 
   <!-- Документы -->
@@ -212,47 +245,128 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-6 flex-wrap">
         <h2 class="text-2xl font-bold">Документы</h2>
-        <a href="docs/price-list.pdf" download class="px-4 py-2 rounded-xl bg-purple-600 text-white hover:bg-purple-700">
-          Скачать прейскурант (PDF)
-        </a>
+        <a href="docs/price-list.pdf" download class="px-4 py-2 rounded-xl bg-purple-600 text-white hover:bg-purple-700">Скачать прейскурант (PDF)</a>
       </div>
       <p class="mt-3 text-sm text-slate-600">Документы в формате PDF открываются во всплывающем окне.</p>
 
-      <!-- Лента для телефона -->
-      <div class="docs-mobile-strip mt-6 -mx-4 px-4 sm:hidden">
+      <!-- Лента для телефона (горизонтальная) -->
+      <div class="docs-mobile-strip mt-6 sm:hidden">
         <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2">
-          <!-- 8 элементов, как в ПК-сетке -->
-          <a href="docs/rights.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>Права и обязанности граждан</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/extract.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>Выписка из реестра лицензий</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/usrip.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>ЕГРИП Выписка</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/paid-services.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>Положение о платных услугах</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/pp-736.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>ПП 736</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/pp-736-1.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>ПП 736.1</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/personal-data.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>Согласие на обработку ПДн</b><br><i>Просмотреть</i></span></a>
-          <a href="docs/territorial-program.pdf" data-pdf class="doc-chip"> <span class="doc-badge">PDF</span><span><b>Территориальная программа</b><br><i>Просмотреть</i></span></a>
+          <!-- 11 элементов -->
+          <a href="docs/rights.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Права и обязанности граждан">Права и обязанности граждан</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/extract.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Выписка из реестра лицензий">Выписка из реестра лицензий</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/usrip.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Выписка из Единого государственного реестра индивидуальных предпринимателей">Выписка из Единого государственного реестра индивидуальных предпринимателей</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/paid-services.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Положение об оказании платных медицинских услуг">Положение об оказании платных медицинских услуг</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/pp-736.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Постановление Правительства Российской Федерации № 736">Постановление Правительства Российской Федерации № 736</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/pp-1514.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Постановление Правительства Российской Федерации № 1514">Постановление Правительства Российской Федерации № 1514</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/personal-data.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Согласие на обработку персональных данных">Согласие на обработку персональных данных</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/territorial-program.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи">Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <!-- Новые документы -->
+          <a href="docs/contract-paid-services.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Договор на оказание платных медицинских услуг">Договор на оказание платных медицинских услуг</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/sout-report.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Отчет о проведении специальной оценки условий труда">Отчет о проведении специальной оценки условий труда</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/accreditation-egisz.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста">Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
         </div>
       </div>
 
       <!-- Сетка для планшетов/десктопа -->
       <div class="mt-6 hidden sm:block">
         <div id="docsGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- первые 4 видимы -->
-          <a href="docs/rights.pdf" data-pdf class="doc-card"><span class="doc-badge">PDF</span><div><div class="doc-title">Права и обязанности граждан</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/extract.pdf" data-pdf class="doc-card"><span class="doc-badge">PDF</span><div><div class="doc-title">Выписка из реестра лицензий</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/usrip.pdf" data-pdf class="doc-card"><span class="doc-badge">PDF</span><div><div class="doc-title">ЕГРИП Выписка</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/paid-services.pdf" data-pdf class="doc-card"><span class="doc-badge">PDF</span><div><div class="doc-title">Положение о платных услугах</div><div class="doc-sub">Просмотреть</div></div></a>
+          <!-- Первые 4 -->
+          <a href="docs/rights.pdf" data-pdf class="doc-card" title="Права и обязанности граждан"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Права и обязанности граждан</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/extract.pdf" data-pdf class="doc-card" title="Выписка из реестра лицензий"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Выписка из реестра лицензий</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/usrip.pdf" data-pdf class="doc-card" title="Выписка из Единого государственного реестра индивидуальных предпринимателей"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Выписка из Единого государственного реестра индивидуальных предпринимателей</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/paid-services.pdf" data-pdf class="doc-card" title="Положение об оказании платных медицинских услуг"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Положение об оказании платных медицинских услуг</div><div class="doc-sub">Просмотреть</div></div></a>
 
-          <!-- скрытые до клика -->
-          <a href="docs/pp-736.pdf" data-pdf class="doc-card hidden"><span class="doc-badge">PDF</span><div><div class="doc-title">ПП 736</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/pp-736-1.pdf" data-pdf class="doc-card hidden"><span class="doc-badge">PDF</span><div><div class="doc-title">ПП 736.1</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/personal-data.pdf" data-pdf class="doc-card hidden"><span class="doc-badge">PDF</span><div><div class="doc-title">Согласие на обработку ПДн</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/territorial-program.pdf" data-pdf class="doc-card hidden"><span class="doc-badge">PDF</span><div><div class="doc-title">Территориальная программа</div><div class="doc-sub">Просмотреть</div></div></a>
+          <!-- Скрытые до клика -->
+          <a href="docs/pp-736.pdf" data-pdf class="doc-card hidden" title="Постановление Правительства Российской Федерации № 736"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Постановление Правительства Российской Федерации № 736</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/pp-1514.pdf" data-pdf class="doc-card hidden" title="Постановление Правительства Российской Федерации № 1514"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Постановление Правительства Российской Федерации № 1514</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/personal-data.pdf" data-pdf class="doc-card hidden" title="Согласие на обработку персональных данных"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Согласие на обработку персональных данных</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/territorial-program.pdf" data-pdf class="doc-card hidden" title="Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи</div><div class="doc-sub">Просмотреть</div></div></a>
+
+          <!-- Новые -->
+          <a href="docs/contract-paid-services.pdf" data-pdf class="doc-card hidden" title="Договор на оказание платных медицинских услуг"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Договор на оказание платных медицинских услуг</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/sout-report.pdf" data-pdf class="doc-card hidden" title="Отчет о проведении специальной оценки условий труда"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Отчет о проведении специальной оценки условий труда</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/accreditation-egisz.pdf" data-pdf class="doc-card hidden" title="Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста</div><div class="doc-sub">Просмотреть</div></div></a>
         </div>
 
         <div class="mt-4 flex justify-center">
-          <button id="docsToggle" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300">
-            Показать все (8)
-          </button>
+          <button id="docsToggle" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300">Показать все (11)</button>
         </div>
       </div>
     </div>
@@ -313,6 +427,43 @@
         </div>
       </div>
     </div>
+
+    <!-- Контролирующие органы -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <h3 class="text-lg font-semibold">Контролирующие органы</h3>
+
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <article class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white shadow-sm h-full">
+          <h4 class="font-medium">Управление Роспотребнадзора по Хабаровскому краю</h4>
+          <div class="mt-2 text-sm text-slate-700 space-y-1 flex-1">
+            <div>Адрес: 680009, г. Хабаровск, ул. Карла Маркса, 109 б.</div>
+            <div>Тел.: <a href="tel:+74212274744" class="text-purple-600 hover:underline">8 (4212) 27-47-44</a></div>
+            <div>E-mail: <a href="mailto:root@sanepid.khv.ru" class="text-purple-600 hover:underline">root@sanepid.khv.ru</a></div>
+            <div>Сайт: <a href="http://27.rospotrebnadzor.ru/" target="_blank" rel="noopener" class="text-purple-600 hover:underline">27.rospotrebnadzor.ru</a></div>
+          </div>
+        </article>
+
+        <article class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white shadow-sm h-full">
+          <h4 class="font-medium">Министерство здравоохранения Хабаровского края</h4>
+          <div class="mt-2 text-sm text-slate-700 space-y-1 flex-1">
+            <div>Адрес: г. Хабаровск, ул. Муравьёва-Амурского, 32</div>
+            <div>Тел.: <a href="tel:+74212402201" class="text-purple-600 hover:underline">+7 (4212) 40-22-01</a>, <a href="tel:+74212402322" class="text-purple-600 hover:underline">+7 (4212) 40-23-22</a></div>
+            <div>Сайт: <a href="https://zdrav.khv.gov.ru" target="_blank" rel="noopener" class="text-purple-600 hover:underline">zdrav.khv.gov.ru</a></div>
+          </div>
+        </article>
+
+        <article class="flex flex-col p-5 rounded-xl border border-slate-200 bg-white shadow-sm h-full">
+          <h4 class="font-medium">Территориальный орган Росздравнадзора<br>по Хабаровскому краю, ЕАО и ЧАО</h4>
+          <div class="mt-2 text-sm text-slate-700 space-y-1 flex-1">
+            <div>Почтовый адрес: 680000, г. Хабаровск, ул. Петра Комарова, д. 6, офис № 104</div>
+            <div>Тел.: <a href="tel:+79242273951" class="text-purple-600 hover:underline">8 (924) 227-39-51</a></div>
+            <div>Тел/факс: <a href="tel:+74212752230" class="text-purple-600 hover:underline">8 (4212) 75-22-30</a>; <a href="tel:+74212752226" class="text-purple-600 hover:underline">75-22-26</a></div>
+            <div>E-mail: <a href="mailto:info@reg27.roszdravnadzor.gov.ru" class="text-purple-600 hover:underline">info@reg27.roszdravnadzor.gov.ru</a></div>
+            <div>Сайт: <a href="https://27reg.roszdravnadzor.gov.ru" target="_blank" rel="noopener" class="text-purple-600 hover:underline">27reg.roszdravnadzor.gov.ru</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- Подвал -->
@@ -325,7 +476,7 @@
       <div>
         <div class="font-semibold">Контакты</div>
         <div class="mt-1 text-slate-600">Тел.: <a class="text-purple-600 hover:underline" href="tel:+79242112349">8 (924) 211-23-49</a></div>
-        <div class="text-slate-600">E-mail: <a class="text-purple-600 hover:underline" href="mailto:iralitvinovskaya@mail.ru">iralitvinовskaya@mail.ru</a></div>
+        <div class="text-slate-600">E-mail: <a class="text-purple-600 hover:underline" href="mailto:iralitvinovskaya@mail.ru">iralitvinovskaya@mail.ru</a></div>
       </div>
       <div>
         <div class="font-semibold">Адрес</div>
@@ -337,7 +488,7 @@
     </div>
   </footer>
 
-  <!-- Скрипты (ES-модули) -->
+  <!-- Скрипты -->
   <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
