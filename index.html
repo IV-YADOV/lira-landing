@@ -185,7 +185,7 @@
             <img src="image/doctor1.JPG" alt="Ирина Литвиновская" class="w-28 h-40 object-cover rounded-2xl"/>
             <div>
               <h3 class="font-semibold text-lg">Литвиновская Ирина Анатольевна</h3>
-              <div class="text-sm text-slate-600">Врач дерматовенеролог-косметолог</div>
+              <div class="text-sm text-slate-600">Врач косметолог</div>
               <p class="mt-3 text-sm text-slate-700">Ведущий специалист по инъекционным методикам. Многолетний опыт.</p>
               <button data-doctor="litvinovskaya" class="mt-3 px-3 py-1.5 rounded-lg bg-purple-600 text-white text-sm hover:bg-purple-700">Подробнее</button>
             </div>
@@ -252,7 +252,7 @@
       <!-- Лента для телефона (горизонтальная) -->
       <div class="docs-mobile-strip mt-6 sm:hidden">
         <div class="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2">
-          <!-- 11 элементов -->
+          <!-- базовые -->
           <a href="docs/rights.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
             <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
             <div>
@@ -317,7 +317,7 @@
             </div>
           </a>
 
-          <!-- Новые документы -->
+          <!-- Ранее добавленные -->
           <a href="docs/contract-paid-services.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
             <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
             <div>
@@ -334,46 +334,62 @@
             </div>
           </a>
 
-          <a href="docs/accreditation-egisz.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+          <a href="docs/info-security-policy.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
             <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
             <div>
-              <div class="font-medium leading-snug line-clamp-2" title="Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста">Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста</div>
-              <div class="text-xs text-slate-600">Просмотреть</div>
-            </div>
-          </a>
-          <a href="docs/info-security-policy.pdf" data-pdf
-            class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
-            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
-            <div>
-              <div class="font-medium leading-snug line-clamp-2" title="Политика информационной безопасности">
-                Политика информационной безопасности
-              </div>
+              <div class="font-medium leading-snug line-clamp-2" title="Политика информационной безопасности">Политика информационной безопасности</div>
               <div class="text-xs text-slate-600">Просмотреть</div>
             </div>
           </a>
 
-          <a href="docs/internal-regulations.pdf" data-pdf
-            class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+          <a href="docs/internal-regulations.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
             <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
             <div>
-              <div class="font-medium leading-snug line-clamp-2" title="Правила внутреннего распорядка">
-                Правила внутреннего распорядка
-              </div>
+              <div class="font-medium leading-snug line-clamp-2" title="Правила внутреннего распорядка">Правила внутреннего распорядка</div>
               <div class="text-xs text-slate-600">Просмотреть</div>
             </div>
           </a>
 
-          <a href="docs/sanitary-epidemiological-conclusion.pdf" data-pdf
-            class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+          <a href="docs/sanitary-epidemiological-conclusion.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
             <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
             <div>
-              <div class="font-medium leading-snug line-clamp-2" title="Санитарно-эпидемиологическое заключение">
-                Санитарно-эпидемиологическое заключение
-              </div>
+              <div class="font-medium leading-snug line-clamp-2" title="Санитарно-эпидемиологическое заключение">Санитарно-эпидемиологическое заключение</div>
               <div class="text-xs text-slate-600">Просмотреть</div>
             </div>
           </a>
 
+          <!-- НОВОЕ: 2 стандарта, распоряжение 1101, приказ 543 -->
+          <a href="docs/medical-care-standard-1.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Стандарт медицинской помощи (документ 1)">Стандарт медицинской помощи (документ 1)</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/medical-care-standard-2.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Стандарт медицинской помощи (документ 2)">Стандарт медицинской помощи (документ 2)</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/rasporyazhenie-1101.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Распоряжение № 1101">Распоряжение № 1101</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
+
+          <a href="docs/prikaz-minzdrava-543.pdf" data-pdf class="min-w-[260px] snap-start p-4 rounded-xl border border-slate-100 bg-slate-50 hover:border-purple-200 transition flex gap-3 items-center">
+            <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 grid place-items-center text-xs">PDF</div>
+            <div>
+              <div class="font-medium leading-snug line-clamp-2" title="Приказ Министерства здравоохранения № 543">Приказ Министерства здравоохранения № 543</div>
+              <div class="text-xs text-slate-600">Просмотреть</div>
+            </div>
+          </a>
         </div>
       </div>
 
@@ -392,41 +408,22 @@
           <a href="docs/personal-data.pdf" data-pdf class="doc-card hidden" title="Согласие на обработку персональных данных"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Согласие на обработку персональных данных</div><div class="doc-sub">Просмотреть</div></div></a>
           <a href="docs/territorial-program.pdf" data-pdf class="doc-card hidden" title="Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Территориальная программа государственных гарантий бесплатного оказания гражданам медицинской помощи</div><div class="doc-sub">Просмотреть</div></div></a>
 
-          <!-- Новые -->
+          <!-- Ранее добавленные -->
           <a href="docs/contract-paid-services.pdf" data-pdf class="doc-card hidden" title="Договор на оказание платных медицинских услуг"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Договор на оказание платных медицинских услуг</div><div class="doc-sub">Просмотреть</div></div></a>
           <a href="docs/sout-report.pdf" data-pdf class="doc-card hidden" title="Отчет о проведении специальной оценки условий труда"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Отчет о проведении специальной оценки условий труда</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/accreditation-egisz.pdf" data-pdf class="doc-card hidden" title="Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Выписка о наличии в Единой государственной информационной системе в сфере здравоохранения данных, подтверждающих факт прохождения лицом аккредитации специалиста</div><div class="doc-sub">Просмотреть</div></div></a>
-          <a href="docs/info-security-policy.pdf" data-pdf class="doc-card hidden"
-            title="Политика информационной безопасности">
-            <span class="doc-badge">PDF</span>
-            <div>
-              <div class="doc-title line-clamp-2">Политика информационной безопасности</div>
-              <div class="doc-sub">Просмотреть</div>
-            </div>
-          </a>
+          <a href="docs/info-security-policy.pdf" data-pdf class="doc-card hidden" title="Политика информационной безопасности"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Политика информационной безопасности</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/internal-regulations.pdf" data-pdf class="doc-card hidden" title="Правила внутреннего распорядка"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Правила внутреннего распорядка</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/sanitary-epidemiological-conclusion.pdf" data-pdf class="doc-card hidden" title="Санитарно-эпидемиологическое заключение"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Санитарно-эпидемиологическое заключение</div><div class="doc-sub">Просмотреть</div></div></a>
 
-          <a href="docs/internal-regulations.pdf" data-pdf class="doc-card hidden"
-            title="Правила внутреннего распорядка">
-            <span class="doc-badge">PDF</span>
-            <div>
-              <div class="doc-title line-clamp-2">Правила внутреннего распорядка</div>
-              <div class="doc-sub">Просмотреть</div>
-            </div>
-          </a>
-
-          <a href="docs/sanitary-epidemiological-conclusion.pdf" data-pdf class="doc-card hidden"
-            title="Санитарно-эпидемиологическое заключение">
-            <span class="doc-badge">PDF</span>
-            <div>
-              <div class="doc-title line-clamp-2">Санитарно-эпидемиологическое заключение</div>
-              <div class="doc-sub">Просмотреть</div>
-            </div>
-          </a>
-
+          <!-- НОВОЕ -->
+          <a href="docs/medical-care-standard-1.pdf" data-pdf class="doc-card hidden" title="Стандарт медицинской помощи (документ 1)"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Стандарт медицинской помощи (документ 1)</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/medical-care-standard-2.pdf" data-pdf class="doc-card hidden" title="Стандарт медицинской помощи (документ 2)"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Стандарт медицинской помощи (документ 2)</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/rasporyazhenie-1101.pdf" data-pdf class="doc-card hidden" title="Распоряжение № 1101"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Распоряжение № 1101</div><div class="doc-sub">Просмотреть</div></div></a>
+          <a href="docs/prikaz-minzdrava-543.pdf" data-pdf class="doc-card hidden" title="Приказ Министерства здравоохранения № 543"><span class="doc-badge">PDF</span><div><div class="doc-title line-clamp-2">Приказ Министерства здравоохранения № 543</div><div class="doc-sub">Просмотреть</div></div></a>
         </div>
 
         <div class="mt-4 flex justify-center">
-          <button id="docsToggle" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300">Показать все (14)</button>
+          <button id="docsToggle" class="px-4 py-2 rounded-xl border border-slate-200 hover:border-slate-300">Показать все (17)</button>
         </div>
       </div>
     </div>
@@ -473,6 +470,7 @@
             <div>Индивидуальный предприниматель <span class="whitespace-nowrap">Литвиновская Ирина Анатольевна</span></div>
             <div>ОГРНИП: 3&nbsp;2&nbsp;4&nbsp;2&nbsp;7&nbsp;0&nbsp;0&nbsp;0&nbsp;0&nbsp;0&nbsp;0&nbsp;1&nbsp;6&nbsp;0&nbsp;2</div>
             <div>Кабинет косметологии «Лира»</div>
+            <div><span class="font-medium">Почтовый адрес:</span> 680013, г. Хабаровск, ул. Рабочий городок, д. 8А, кв. 140</div>
           </div>
         </div>
       </div>

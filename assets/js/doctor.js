@@ -37,6 +37,7 @@ export function initDoctor() {
       pdfs: [
         { title: 'Диплом', url: 'docs/doctor1/diplom.pdf' },
         { title: 'Сертификат', url: 'docs/doctor1/certificate.pdf' },
+        { title: 'Выписка о наличии в...', url: 'docs/accreditation-egisz.pdf' },
       ],
       // Вариант Б: один общий «портфолио» PDF (оставь null, если не нужно)
       portfolio: null // 'docs/certs/litvinovskaya/portfolio.pdf'
